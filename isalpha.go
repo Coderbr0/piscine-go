@@ -1,16 +1,11 @@
 package piscine
 
-func IsAlpha(str string) bool {
-	runeArray := []rune(str)
-	runeCount := arrayCount(str)
-	count := 0
-	for _, char := range runeArray {
-		if isNumberOrAlph(char) {
-			count++
+func IsAlpha(fraza string) bool {
+	strbool := true
+	for _, bukva := range fraza {
+		if !(bukva >= 'a' && bukva <= 'z' || bukva >= 'A' && bukva <= 'Z' || bukva >= '0' && bukva <= '9') {
+			strbool = false
 		}
 	}
-	if count == runeCount {
-		return true
-	}
-	return false
+	return strbool
 }
