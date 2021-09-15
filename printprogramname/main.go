@@ -3,9 +3,13 @@ package main
 import (
 	"os"
 
-	piscine ".."
+	"github.com/01-edu/z01"
 )
 
 func main() {
-	piscine.Printrunes(os.Args[0], 0)
+	arg := os.Args
+	for _, w := range arg[0] {
+		z01.PrintRune(w)
+	}
+	z01.PrintRune('\n')
 }
