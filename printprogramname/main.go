@@ -7,9 +7,9 @@ import (
 )
 
 func main() {
-	byteStr := []rune(os.Args[0])
-	for _, str := range byteStr {
-		z01.PrintRune(str)
+	arg := os.Args
+	for _, char := range arg[0] {
+		z01.PrintRune(char)
 	}
-	z01.PrintRune(10)
+	z01.PrintRune('\n')
 }
