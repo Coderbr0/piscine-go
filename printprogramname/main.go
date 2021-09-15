@@ -1,10 +1,15 @@
 package main
 
 import (
-	"fmt"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
-	fmt.Println(os.Args[0])
+	byteStr := []rune(os.Args[0])
+	for _, str := range byteStr {
+		z01.PrintRune(str)
+	}
+	z01.PrintRune(10)
 }
